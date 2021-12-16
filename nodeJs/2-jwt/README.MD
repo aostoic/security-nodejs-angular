@@ -27,13 +27,13 @@ const jwtMiddleware = function (req, res, next) {
 
 app.get("/generateJwt", (req, res) => {
   const data = {};
-  let tokenGenerado = jwt.encode(data, secretKey);
++ let tokenGenerado = jwt.encode(data, secretKey);
   res.send(tokenGenerado);
 });
 
 + app.get("/validateJwt", jwtMiddleware, (req, res) => {
-  res.send("token validado");
-});
++  res.send("token validado");
++ });
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
