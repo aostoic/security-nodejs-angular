@@ -1,6 +1,5 @@
 import express, { Application } from 'express'
 import dotenv from 'dotenv'
-
 import routes from './routes'
 
 dotenv.config()
