@@ -27,7 +27,7 @@ const jwtMiddleware = function (req, res, next) {
 
 app.get("/generateJwt", (req, res) => {
   const data = {};
-+ let tokenGenerado = jwt.encode(data, secretKey);
+ let tokenGenerado = jwt.encode(data, secretKey);
   res.send(tokenGenerado);
 });
 
