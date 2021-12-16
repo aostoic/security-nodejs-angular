@@ -5,19 +5,19 @@
 
 # index.js
 
-```
+```diff
 const express = require("express");
-const jwt = require("jwt-simple");
+- const jwt = require("jwt-simple");
 
 const app = express();
 const port = 3000;
 
-const secretKey = "my_secret_key";
+- const secretKey = "my_secret_key";
 
 const jwtMiddleware = function (req, res, next) {
   try {
     console.log(req.headers);
-    let tokenValidado = jwt.decode(req.headers.authorization, secretKey);
+-   let tokenValidado = jwt.decode(req.headers.authorization, secretKey);
     console.log(tokenValidado);
     next();
   } catch (err) {
@@ -31,7 +31,7 @@ app.get("/generateJwt", (req, res) => {
   res.send(tokenGenerado);
 });
 
-app.get("/validateJwt", jwtMiddleware, (req, res) => {
++ app.get("/validateJwt", jwtMiddleware, (req, res) => {
   res.send("token validado");
 });
 
