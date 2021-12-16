@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "17967b55-b332-431f-8d83-c2e263086a06",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "generateJwt",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.e30.IfpB130X_7nQIPDT_a0P6uzV4YBiVtYEi2LSPyVlMFM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/generateJwt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"generateJwt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "validateJwt",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.e30.IfpB130X_7nQIPDT_a0P6uzV4YBiVtYEi2LSPyVlMFM1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/validateJwt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"validateJwt"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
