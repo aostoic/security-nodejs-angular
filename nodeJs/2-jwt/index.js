@@ -17,13 +17,21 @@ const jwtMiddleware = function (req, res, next) {
   }
 };
 
+app.use((req, res, next) => {
+  if (req.path === "/healthcheck " || req.path === "/generateJwt") {
+    next();
+  } else {
+    jwtMiddleware(req, res, next);
+  }
+});
+
 app.get("/generateJwt", (req, res) => {
   const data = {};
   let tokenGenerado = jwt.encode(data, secretKey);
   res.send(tokenGenerado);
 });
 
-app.get("/validateJwt", jwtMiddleware, (req, res) => {
+app.get("/validateJwt", (req, res) => {
   res.send("token validado");
 });
 
