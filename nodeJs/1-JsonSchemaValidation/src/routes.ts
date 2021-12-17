@@ -1,10 +1,8 @@
 import { Application, Router } from 'express'
-import TasksController from './controllers/tasks.controller'
 import UsersController from './controllers/users.controller'
 
 const _routes: [string, Router][] = [
 	['/users', UsersController],
-	['/tasks', TasksController],
 ]
 
 const routes = (app: Application) => {
