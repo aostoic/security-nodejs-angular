@@ -11,3 +11,4 @@
 
 1. Production: `npm i express dotenv cors bcryptjs express-validator`
 2. Development: `npm i -D @types/express @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint nodemon prettier pretty-quick ts-node typescript`
+

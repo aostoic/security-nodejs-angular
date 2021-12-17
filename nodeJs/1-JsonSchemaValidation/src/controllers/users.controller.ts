@@ -1,10 +1,11 @@
 import { Request, Response, Router } from 'express'
 import { check } from 'express-validator'
 import validateFields from '../middlewares/validate-fields.middleware'
+import validateHeaders from '../middlewares/validate-headers.middleware'
 
 const UsersController: Router = Router()
 
-UsersController.get('/', async (_: Request, res: Response) => {
+UsersController.get('/', [validateHeaders],async (_: Request, res: Response) => {
 	try {
 		res.status(200).send({
 			message: 'Getting users with success',
